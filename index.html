@@ -23,7 +23,8 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
   <!-- JavaScript -->
-  <script src="src/main.js" defer></script> <!-- defer : 브라우저가 script를 다운로드 받을 때까지 기다리지 않고 HTML을 표기하게 해줌 -->
+  <script type="module" src="src/main.js" defer></script> <!-- defer : 브라우저가 script를 다운로드 받을 때까지 기다리지 않고 HTML을 표기하게 해줌 -->
+  <script type="module" src="src/project.js" defer></script><!-- type = module -> 모듈화 -->
 </head>
 <body>
   <!-- Header -->
@@ -32,7 +33,7 @@
       <img class="header__logo__img" src="images/favicon.ico" alt="logo">
       <h1 class="header__logo__title"><a href="#">Grommit</a></h1>
     </div>
-
+    
     <nav class="header__nav">
       <ul class="header__menu">
         <li><a class="header__menu__item active" href="#home">Home</a></li>
@@ -43,6 +44,10 @@
         <li><a class="header__menu__item" href="#contact">Contact</a></li>
       </ul>
     </nav>
+
+    <button class="header__toggle" aria-label="navigation menu toggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
   </header>
 
   <!-- Main -->
