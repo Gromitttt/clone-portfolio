@@ -22,25 +22,21 @@ const observer = new IntersectionObserver(observerCallback, options);
 sections.forEach((section) => observer.observe(section));
 
 function observerCallback(entries) {
-  let selectLastOne; // flag 변수
+  let selectLastOne; 
   entries.forEach((entry) => {
     const index = sectionIds.indexOf(`#${entry.target.id}`);
     visibleSections[index] = entry.isIntersecting;
     selectLastOne = 
-      index === sectionIds.length - 1 && 
-      entry.isIntersecting && 
-      entry.intersectionRatio >= 0.95;
+    index === sectionIds.length - 1 && 
+    entry.isIntersecting && 
+    entry.intersectionRatio >= 0.95;
   });
 
   const navIndex = selectLastOne 
     ? sectionIds.length - 1 
     : findFirstIntersecting(visibleSections);
 
-  const navItem = navItems[navIndex];
-  if (!navItem) return;
-  activeNavItem.classList.remove('active');
-  activeNavItem = navItem;
-  activeNavItem.classList.add('active');
+  selectNavItem(navIndex);
 }
 
 function selectNavItem(index) {
@@ -53,5 +49,5 @@ function selectNavItem(index) {
 
 function findFirstIntersecting(intersections) {
   const index = intersections.indexOf(true);
-  return index >= 0 ? index : 0;
+  return index >= 0 ? index : 0; // 만약 -1 라면 0으로 -> true가 없다면 indexOf는 -1을 반환할 수 있음 (안전하게,,)
 }
