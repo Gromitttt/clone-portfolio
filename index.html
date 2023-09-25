@@ -25,6 +25,7 @@
   <!-- JavaScript -->
   <script type="module" src="src/main.js" defer></script> <!-- defer : 브라우저가 script를 다운로드 받을 때까지 기다리지 않고 HTML을 표기하게 해줌 -->
   <script type="module" src="src/project.js" defer></script><!-- type = module -> 모듈화 -->
+  <script type="module" src="src/active_menu.js"></script>
 </head>
 <body>
   <!-- Header -->
@@ -36,7 +37,7 @@
     
     <nav class="header__nav">
       <ul class="header__menu">
-        <li><a class="header__menu__item active" href="#home">Home</a></li>
+        <li><a class="header__menu__item" href="#home">Home</a></li>
         <li><a class="header__menu__item" href="#about">About</a></li>
         <li><a class="header__menu__item" href="#skills">Skills</a></li>
         <li><a class="header__menu__item" href="#work">My Work</a></li>
@@ -53,7 +54,7 @@
   <!-- Main -->
   <main>
     <!-- Home -->
-    <section id="home">
+    <section id="home" class="section">
       <div class="home__container">
         <img class="home__avatar" src="images/profile.png" alt="profile">
         <h2 class="home__title">Hello<br/>I&#39;m <strong class="home__title--strong">Dream Coder</strong>, Grommit</h2>
@@ -138,7 +139,7 @@
               </li>
             </ul>
           </section>
-          <sectio class="skills__tools">
+          <section class="skills__tools">
             <h3 class="skills__title">Tools</h3>
             <ul>
               <li>Visual Studio Code</li>
@@ -146,7 +147,7 @@
               <li>Android Studio code</li>
               <li>Sketch app</li>
             </ul>
-          </sectio>
+          </section>
           <section class="skills__etc">
             <h3 class="skills__title">Etc</h3>
             <ul>
