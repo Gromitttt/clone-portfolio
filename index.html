@@ -20,12 +20,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/b818289206.js" crossorigin="anonymous"></script>
+  <!-- Typeit -->
+  <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css">
   <!-- JavaScript -->
   <script type="module" src="src/main.js" defer></script> <!-- defer : 브라우저가 script를 다운로드 받을 때까지 기다리지 않고 HTML을 표기하게 해줌 -->
   <script type="module" src="src/project.js" defer></script><!-- type = module -> 모듈화 -->
   <script type="module" src="src/active_menu.js"></script>
+  <script type="module" src="src/type.js"></script>
 </head>
 <body>
   <!-- Header -->
@@ -57,10 +60,11 @@
     <section id="home" class="section">
       <div class="home__container">
         <img class="home__avatar" src="images/profile.png" alt="profile">
-        <h2 class="home__title">Hello<br/>I&#39;m <strong class="home__title--strong">Dream Coder</strong>, Grommit</h2>
+        <h2 class="home__title" aria-label="Hello I'm Dream Coder, Areum">Hello<br/>I&#39;m <strong class="home__title--strong">Dream Coder</strong>, Grommit</h2>
         <p class="home__description">A software engineer currently residing in the UK, London</p>
         <a class="home__contact" href="#contact">Contact Me</a>
       </div>
+      
     </section>
 
     <!-- About -->
